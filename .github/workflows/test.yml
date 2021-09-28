@@ -1,9 +1,9 @@
 name: Test
 on:
-  pull_request:
-      push:
-        branches:
-          - master
+  workflow_run:
+    workflows: [ "Build" ]
+    types:
+      - requested
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest

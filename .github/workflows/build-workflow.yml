@@ -46,7 +46,7 @@ jobs:
 
   upstream-trigger:
     runs-on: ubuntu-latest
-    needs: [ upstream-3 ]
+    needs: [upstream-3]
     call-workflow-passing-data:
       uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@v1
       with:

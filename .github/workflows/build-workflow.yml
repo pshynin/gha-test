@@ -46,7 +46,7 @@ jobs:
 
   upstream-trigger:
     runs-on: ubuntu-latest
-    uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@test4
+    uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@master
     needs: [upstream-3]
     steps:
       - name: Test with environment variables

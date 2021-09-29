@@ -5,7 +5,7 @@ on:
     inputs:
       username:
         required: false
-        type: string
+        # type: string
 
 jobs:
   downstream-1:

@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [upstream-3]
     call-workflow-passing-data:
-      uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@v1
+      uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@test4
       with:
         username: Hello
     - name: Test with environment variables

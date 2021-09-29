@@ -44,10 +44,13 @@ jobs:
           TAG_NAME: upstream-3-tag-${{ steps.date.outputs.date }}
           RELEASE_NAME: upstream-3-name-${{ steps.date.outputs.date }}
 
-  call-workflow:
+  upstream-trigger:
     runs-on: ubuntu-latest
     needs: [ upstream-3 ]
-    steps:
-      - name: Some crazy stuff
-        uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@v1
+    uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@v1
+    - name: Test with environment variables
+        run: echo $TAG_NAME - $RELEASE_NAME
+        env:
+          TAG_NAME: upstream-trigger-tag-${{ steps.date.outputs.date }}
+          RELEASE_NAME: upstream-trigger-name-${{ steps.date.outputs.date }}
 

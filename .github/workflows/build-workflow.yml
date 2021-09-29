@@ -47,5 +47,7 @@ jobs:
   call-workflow:
     runs-on: ubuntu-latest
     needs: [ upstream-3 ]
-    uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@v1
+    steps:
+      - name: Some crazy stuff
+        uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@v1
 

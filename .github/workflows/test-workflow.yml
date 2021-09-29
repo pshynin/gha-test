@@ -6,13 +6,6 @@ on:
     types:
       - requested
 
-#on:
-#  workflow_run:
-#    workflows: [ "Build" ]
-#    types:
-#      - completed
-#      - requested
-
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest

@@ -9,7 +9,7 @@ on:
 jobs:
   downstream-1:
     runs-on: ubuntu-latest
-    needs: [upstream-build]
+    needs: [upstream-1]
     steps:
       - name: Get current date
         id: date

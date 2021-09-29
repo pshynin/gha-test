@@ -1,0 +1,18 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  upstream-trigger:
+    runs-on: ubuntu-latest
+    uses: pshynin/gha-test/.github/workflows/test-reusable-workflow.yml@master
+    steps:
+      - name: Test with environment variables
+        run: echo $TAG_NAME - $RELEASE_NAME
+        env:
+          TAG_NAME: upstream-trigger-tag-${{ steps.date.outputs.date }}
+          RELEASE_NAME: upstream-trigger-name-${{ steps.date.outputs.date }}
+

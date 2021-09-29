@@ -1,7 +1,11 @@
 name: Test
 
 on:
-  workflow_run:
+  workflow_call:
+    inputs:
+      username:
+        required: false
+        type: string
 
 jobs:
   downstream-1:
